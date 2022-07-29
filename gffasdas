@@ -1,0 +1,75 @@
+import random
+import time
+
+a = 1
+b = ""
+g = 1
+abobistan = 0
+number = random.randint(0, 10)
+print(number)
+print(f'Привет!\nХочешь сыграть в "Угадай число"?? \n')
+print("Напиши Да/Нет")
+aboba = input(": ")
+if aboba == "Да":
+    print("Отлично! Выберите режим: ")
+    print("Напиши 1(Русская рулетка)/2(Попытки)/3(Бесконечный режим)")
+    abobuius = int(input(": "))
+    if abobuius == 1:
+        print("Отлично!! \nА теперь напиши любое число от 0 до 10")
+        print("P.S При проигрыше ваша папка \"System32\" будет удалена! \nУдачи! :3 ")
+        abobus = int(input(": "))
+        if abobus == number:
+            print("Урааа!!!! Ты победил!!!!")
+        elif abobus != number:
+            while a <= 100:
+                b += '.'
+                print(f"{a} % удаление папки \"System32\"{b}")
+                time.sleep(0.06)
+                a += 1
+                if b == "...":
+                    b = ""
+            else:
+                print("\nСпасибо за игру\n:3")
+    elif abobuius == 2:
+        print("\t\t\tДобро пожаловать в \"Попытки\"! ")
+        print("Напишите любое число от 0 до 10, у вас есть 3 попытки угадать загадонное число")
+        print("Если же вы не справитесь ваша папка \"System32\" будет удалена! \nУдачи! :3 ")
+        while abobistan != number:
+            abobistan = int(input(": "))
+            print(abobistan)
+            if abobistan == number:
+                print(f"Урааа ты победил!! у тебя заняло: {g} попыток!")
+                break
+            elif not abobistan == number:
+                print(f"Неудача! Осталось: {3 - g} попыток!! ")
+            g += 1
+            if g >= 4:
+                while a <= 100:
+                    b += '.'
+                    print(f"{a} % удаление папки \"System32\"{b}")
+                    time.sleep(0.06)
+                    a += 1
+                    if b == "...":
+                        b = ""
+                else:
+                    print("\nСпасибо за игру\n:3")
+                    break
+    elif abobuius == 3:
+        print("\t\t\t Добро пожаловать в \"Бесконечный Режим!\" ")
+        print("Игра будет продолжаться до тех пор, пока вы не угадаете загаданное число! \nУдачи :3 ")
+        print("Напиши число от 0 до 10")
+        while abobistan != number:
+            abobistan = int(input(": "))
+            print(abobistan)
+            if abobistan == number:
+                print(f"Урааа ты победил!! у тебя заняло: {g} попыток!")
+                break
+            elif not abobistan == number:
+                print(f"Неудача! уже {g} попыток! ")
+            g += 1
+    else:
+        print("Чел ты...")
+elif aboba == "Нет":
+    print("ПОШЕЛ %№!*:№@!!!1!1!!")
+else:
+    print("Чел ты...")
